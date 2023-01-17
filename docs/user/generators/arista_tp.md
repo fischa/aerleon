@@ -4,10 +4,9 @@
 
 The following tokens are supported:
 
-- `action`
-- `comment`
+- for common keys see [common.md](common.md)
+
 - `counter`
-- `destination-address`
 - `destination-exclude`
 - `destination-port`
 - `destination-prefix` - this should resolve to a configured field-set in traffic-policy format.
@@ -21,7 +20,6 @@ The following tokens are supported:
   - `rst`
   - `first-fragment` - this  will be rendered as a `fragment` match.
 - `packet-length`
-- `source-address`
 - `source-exclude`
 - `source-port`
 - `source-prefix` - this should resolve to a configured field-set in traffic-policy format.

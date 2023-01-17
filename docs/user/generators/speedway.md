@@ -22,28 +22,20 @@ targets:
 
 ## Term Format
 
-* _action::_ The action to take when matched. See Actions section for valid options.
-* _comment::_ A text comment enclosed in double-quotes.  The comment can extend over multiple lines if desired, until a closing quote is encountered.
+* for common keys see [common.md](common.md)
+
 * _counter::_ Update a counter for matching packets
-* _destination-address::_ One or more destination address tokens
 * _destination-exclude::_ Exclude one or more address tokens from the specified destination-address
 * _destination-interface::_ Specify specific interface a term should apply to (e.g. destination-interface:: eth3)
 * _destination-port::_ One or more service definition tokens
 * _destination-prefix::_ Specify destination-prefix matching (e.g. source-prefix:: configured-neighbors-only)
-* _expiration::_ stop rendering this term after specified date. YYYY-MM-DD
 * _fragement-offset::_ specify a fragment offset of a fragmented packet
 * _icmp-code::_ Specifies the ICMP code to filter on.
 * _icmp-type::_ Specify icmp-type code to match, see section [ICMP TYPES](PolicyFormat#ICMP_TYPES.md) for list of valid arguments
 * _logging::_ Specify that this packet should be logged via syslog.
-* _name::_ Name of the term.
-* _option::_ See platforms supported Options section.
 * _owner::_ Owner of the term, used for organizational purposes.
 * _packet-length::_ specify packet length.
-* _platform::_ one or more target platforms for which this term should ONLY be rendered.
-* _platform-exclude:: one or more target platforms for which this term should NEVER be rendered.
-* _protocol::_ the network protocols this term will match, such as tcp, udp, icmp, or a numeric value.
 * _routing-instance::_ specify routing instance for matching packets.
-* _source-address::_ one or more source address tokens.
 * _source-exclude::_ exclude one or more address tokens from the specified source-address.
 * _source-interface::_ specify specific interface a term should apply to (e.g. source-interface:: eth3).
 * _source-port::_ one or more service definition tokens.

@@ -4,11 +4,10 @@ SRX Loopback is a stateless Juniper ACL with minor changes. Please see code for 
 
 ## Term Format
 
-* _action::_ The action to take when matched. See Actions section for valid options.
+* for common keys see [common.md](common.md)
+
 * _address::_ One or more network address tokens, matches source or destination.
-* _comment::_ A text comment enclosed in double-quotes.  The comment can extend over multiple lines if desired, until a closing quote is encountered.
 * _counter::_ Update a counter for matching packets
-* _destination-address::_ One or more destination address tokens
 * _destination-exclude::_ Exclude one or more address tokens from the specified destination-address
 * _destination-port::_ One or more service definition tokens
 * _destination-prefix::_ Specify destination-prefix matching (e.g. source-prefix:: configured-neighbors-only)
@@ -17,7 +16,6 @@ SRX Loopback is a stateless Juniper ACL with minor changes. Please see code for 
 * _dscp_match::_ Match a DSCP number.
 * _dscp_set::_ Match a DSCP set.
 * _ether_type::_ Match EtherType field.
-* _expiration::_ stop rendering this term after specified date. YYYY-MM-DD
 * _forwarding-class::_ Specify the forwarding class to match.
 * _forwarding-class_except::_ Do not match the specified forwarding classes.
 * _fragement-offset::_ specify a fragment offset of a fragmented packet
@@ -26,21 +24,15 @@ SRX Loopback is a stateless Juniper ACL with minor changes. Please see code for 
 * _icmp-type::_ Specify icmp-type code to match, see section [ICMP TYPES](PolicyFormat#ICMP_TYPES.md) for list of valid arguments
 * _logging::_ Specify that this packet should be logged via syslog.
 * _loss-priority::_ Specify loss priority.
-* _name::_ Name of the term.
 * _next-ip::_ Used in filter based forwarding.
-* _option::_ See platforms supported Options section.
 * _owner::_ Owner of the term, used for organizational purposes.
 * _packet-length::_ specify packet length.
-* _platform::_ one or more target platforms for which this term should ONLY be rendered.
-* _platform-exclude:: one or more target platforms for which this term should NEVER be rendered.
 * _policer::_ specify which policer to apply to matching packets.
 * _port::_ Matches on source or destination ports. Takes a service token.
 * _precedence::_ specify precedence of range 0-7.  May be a single integer, or a space separated list.
-* _protocol::_ the network protocols this term will match, such as tcp, udp, icmp, or a numeric value.
 * _protocol\_except::_ allow all protocol "except" specified.
 * _qos::_ apply quality of service classification to matching packets (e.g. qos:: af4)
 * _routing-instance::_ specify routing instance for matching packets.
-* _source-address::_ one or more source address tokens.
 * _source-exclude::_ exclude one or more address tokens from the specified source-address.
 * _source-port::_ one or more service definition tokens.
 * _source-prefix::_ specify source-prefix matching (e.g. source-prefix:: configured-neighbors-only).

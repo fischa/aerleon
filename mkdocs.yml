@@ -53,6 +53,7 @@ nav:
       - Policy Files: user/lib_policy.md
       - Platforms: user/lib_platforms.md
   - Generators:
+      - common: user/generators/common.md
       - arista: user/generators/arista.md
       - arista_tp: user/generators/arista_tp.md
       - aruba: user/generators/aruba.md

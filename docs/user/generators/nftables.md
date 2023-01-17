@@ -9,11 +9,11 @@ targets:
 
 Unless otherwise stated, all fields are required unless they're marked optional.
 
-- nf_address_family: defines the IP address family for the policies. (inet, inet6, mixed)
-- nf_hook: defines the traffic direction and the nftables hook for the rules. (input, output)
-- default_policy_override: **OPTIONAL** defines the default action (ACCEPT, DROP) for non-matching packets. Default behavior is DROP.
-- priority: **OPTIONAL** By default, this generator creates base chains with a starting priority of 0. Defining an integer value will override this behavior.
-- noverbose: **OPTIONAL** Disable header and term comments in final ACL output. Default behavior is verbose.
+* nf_address_family: defines the IP address family for the policies. (inet, inet6, mixed)
+* nf_hook: defines the traffic direction and the nftables hook for the rules. (input, output)
+* default_policy_override: **OPTIONAL** defines the default action (ACCEPT, DROP) for non-matching packets. Default behavior is DROP.
+* priority: **OPTIONAL** By default, this generator creates base chains with a starting priority of 0. Defining an integer value will override this behavior.
+* noverbose: **OPTIONAL** Disable header and term comments in final ACL output. Default behavior is verbose.
 
 #### Important: stateful firewall only
 
@@ -33,34 +33,30 @@ When reporting bugs about this generator ensure to include:
 
 ## Term Format
 
-- _action::_ The action to take when matched. Refer to Sub-tokens -> Actions for valid options.
-- _comment::_ A text comment enclosed in double-quotes. The comment can extend over multiple lines if desired, until a closing quote is encountered.
-- _destination-address::_ One or more destination address tokens.
-- _destination-port::_ One or more service definition tokens.
-- _expiration::_ stop rendering this term after specified date. YYYY-MM-DD
-- _icmp-type::_ Specify icmp-type code to match.
-- _source-address::_ One or more source address tokens.
-- _source-port::_ One or more service definition tokens.
-- _protocol::_ The network protocol(s) this term will match.
-- _logging::_ NFTables system logging (host-based).
-- _counter::_ NFTables counter for specific term.
+* for common keys see [common.md](common.md)
+
+* _destination-port::_ One or more service definition tokens.
+* _icmp-type::_ Specify icmp-type code to match.
+* _source-port::_ One or more service definition tokens.
+* _logging::_ NFTables system logging (host-based).
+* _counter::_ NFTables counter for specific term.
 
 ## Sub-tokens
 
 ### Actions
 
-- _accept_
-- _drop_
+* _accept_
+* _drop_
 
 ### Logging
 
-- _disable_ no packets will be logged on syslog.
+* _disable_ no packets will be logged on syslog.
 
 All of the below values are accepted, but outcome is exactly the same.
 
-- _true_
-- _syslog_
-- _local_
+* _true_
+* _syslog_
+* _local_
 
 ### Counter
 
@@ -72,6 +68,7 @@ This generator normalizes certain capirca policy.py string types to NFTables sem
 
 #### IPv4
 
+```text
 | ICMPv4 type code | Capirca (policy.py)  | NFtables manual         |
 |------------------|----------------------|-------------------------|
 | 0                | echo-reply           | echo-reply              |
@@ -92,9 +89,11 @@ This generator normalizes certain capirca policy.py string types to NFTables sem
 | 18               | mask-reply           | address-mask-reply      |
 | 31               | conversion-error     |                         |
 | 32               | mobile-redirect      |                         |
+```
 
 #### IPv6
 
+```text
 | ICMPv6 type code | Capirca (policy.py)                      | NFtables manual                             |
 |------------------|------------------------------------------|---------------------------------------------|
 | 1                | destination-unreachable                  | destination-unreachable                     |
@@ -126,9 +125,9 @@ This generator normalizes certain capirca policy.py string types to NFTables sem
 | 151              | multicast-router-advertisement           |                                             |
 | 152              | multicast-router-solicitation            |                                             |
 | 153              | multicast-router-termination             |                                             |
-
+```
 _source:_ https://www.netfilter.org/projects/nftables/manpage.html
 
 ### Option
 
-- _tcp-established_ and _established_ will cause the term to not be rendered in the final NFT configuration. See 'Important' section above.
+* _tcp-established_ and _established_ will cause the term to not be rendered in the final NFT configuration. See 'Important' section above.
