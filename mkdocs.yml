@@ -52,6 +52,7 @@ nav:
       - Service Files: user/lib_service.md
       - Policy Files: user/lib_policy.md
       - Platforms: user/lib_platforms.md
+      - ICMP Types: user/generators/icmp_types.md
   - Generators:
       - common: user/generators/common.md
       - arista: user/generators/arista.md
@@ -77,7 +78,8 @@ nav:
       - pcap: user/generators/pcap.md
       - speedway: user/generators/speedway.md
       - srxlo: user/generators/srxlo.md
-      - windows_advfirewall.md: user/generators/windows_advfirewall.md
+      - windows_advfirewall: user/generators/windows_advfirewall.md
+      - windows_ipsec: user/generators/windows_ipsec.md
   - Frequently Asked Questions: user/faq.md
   - Release Notes:
       - user/release_notes/index.md

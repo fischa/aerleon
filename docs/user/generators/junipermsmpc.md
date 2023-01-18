@@ -1,10 +1,12 @@
 # Juniper MSMPC
 
-The juniper header designation has the following format:
+## Header Format
+
+The juniper MSMPC header designation has the following format:
 
 ```yaml
 targets:
-    juniper: [filter name] {inet|inet6|mixed} {noverbose} {ingress|egress}
+    msmpc: [filter name] {inet|inet6|mixed} {noverbose} {ingress|egress}
 ```
 
 * _filter name_: defines the name of the juniper msmpc filter.
@@ -17,3 +19,15 @@ targets:
 When inet4 or inet6 is specified, naming tokens with both IPv4 and IPv6 filters will be rendered using only the specified addresses.
 
 When neither ingress or egress is specified, the filter will be applied in both (input-output) directions. This is the default.
+
+## Term Format
+
+TBD
+
+## Sub Tokens
+
+### Actions
+
+* _accept_
+* _deny_
+* _reject_

@@ -1,5 +1,7 @@
 # NSXv
 
+## Header Format
+
 The nsx header designation has the following format:
 
 ```yaml
@@ -21,13 +23,10 @@ targets:
 
 * for common keys see [common.md](common.md)
 
-* _destination-exclude::_ Exclude one or more address tokens from the specified destination-address
-* _destination-port::_ One or more service definition tokens
-* _icmp-type::_ Specify icmp-type code to match, see section [ICMP TYPES](PolicyFormat#ICMP_TYPES.md) for list of valid arguments
-* _logging::_ Specify that this packet should be logged via syslog.
-* _source-exclude::_ exclude one or more address tokens from the specified source-address.
-* _source-port::_ one or more service definition tokens.
-* _verbatim::_ this specifies that the text enclosed within quotes should be rendered into the output without interpretation or modification.  This is sometimes used as a temporary workaround while new required features are being added.
+* _destination-exclude_: Exclude one or more address tokens from the specified destination-address
+* _logging_: Specify that this packet should be logged via syslog.
+* _source-exclude_: exclude one or more address tokens from the specified source-address.
+* _verbatim_: this specifies that the text enclosed within quotes should be rendered into the output without interpretation or modification.  This is sometimes used as a temporary workaround while new required features are being added.
 
 ## Sub Tokens
 

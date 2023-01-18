@@ -1,5 +1,7 @@
 # Nftables
 
+## Header Format
+
 The NFTables header designation has the following format:
 
 ```yaml
@@ -15,7 +17,7 @@ Unless otherwise stated, all fields are required unless they're marked optional.
 * priority: **OPTIONAL** By default, this generator creates base chains with a starting priority of 0. Defining an integer value will override this behavior.
 * noverbose: **OPTIONAL** Disable header and term comments in final ACL output. Default behavior is verbose.
 
-#### Important: stateful firewall only
+### Important: stateful firewall only
 
 This NFTables ACL generator generates stateful policies via  [conntrack](https://wiki.nftables.org/wiki-nftables/index.php/Matching_connection_tracking_stateful_metainformation). Each NFTables base chain will accept valid return packets via (`ct state established,related accept`).
 
@@ -23,7 +25,7 @@ When a non-deny term is processed for ACL generation, the `ct state new` is adde
 
 An implementation design for this generator is that terms with options 'established', 'tcp-established' will not rendered in the final NFT configuration.
 
-#### Reporting bugs
+### Reporting bugs
 
 When reporting bugs about this generator ensure to include:
 
@@ -35,11 +37,8 @@ When reporting bugs about this generator ensure to include:
 
 * for common keys see [common.md](common.md)
 
-* _destination-port::_ One or more service definition tokens.
-* _icmp-type::_ Specify icmp-type code to match.
-* _source-port::_ One or more service definition tokens.
-* _logging::_ NFTables system logging (host-based).
-* _counter::_ NFTables counter for specific term.
+* _logging_: NFTables system logging (host-based).
+* _counter_: NFTables counter for specific term.
 
 ## Sub-tokens
 
@@ -126,6 +125,7 @@ This generator normalizes certain capirca policy.py string types to NFTables sem
 | 152              | multicast-router-solicitation            |                                             |
 | 153              | multicast-router-termination             |                                             |
 ```
+
 _source:_ https://www.netfilter.org/projects/nftables/manpage.html
 
 ### Option

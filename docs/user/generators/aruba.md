@@ -1,5 +1,7 @@
 # Aruba
 
+## Header Format
+
 The aruba header designation has the following format:
 
 ```yaml
@@ -14,8 +16,7 @@ targets:
 
 * for common keys see [common.md](common.md)
 
-* _destination-port::_ One or more service definition tokens
-* _verbatim::_ this specifies that the text enclosed within quotes should be rendered into the output without interpretation or modification.  This is sometimes used as a temporary workaround while new required features are being added.
+* _verbatim_: this specifies that the text enclosed within quotes should be rendered into the output without interpretation or modification.  This is sometimes used as a temporary workaround while new required features are being added.
 
 ## Sub Tokens
 
@@ -26,6 +27,6 @@ targets:
 
 ### Option
 
-* _destination-is-user::_ Aruba option to specify that the destination should be a user.
-* _negate::_ Used with DSM summarizer, negates the DSM.
-* _source-is-user::_ Aruba option to specify that the source should be a user.
+* _destination-is-user_: Aruba option to specify that the destination should be a user.
+* _negate_: Used with DSM summarizer, negates the DSM.
+* _source-is-user_: Aruba option to specify that the source should be a user.

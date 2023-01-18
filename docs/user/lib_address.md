@@ -9,7 +9,37 @@ terms:
     action: deny
 ```
 
+## YAML
+
+```yaml
+networks:
+  RFC1918:
+    values:
+      - address: 10.0.0.0/8
+        comment: "non-public"
+      - address: 172.16.0.0/12
+        comment: "non-public"
+      - address: 192.168.0.0/16
+        comment: "non-public"
+
+  RESERVED:
+    values:
+      - address: 0.0.0.0/8
+        comment: "reserved"
+      - name: RFC1918
+      - name: LOOPBACK
+      # ... skipped...
+
+  BOGON:
+    values:
+      - address: 0.0.0.0/8
+      - address: 192.0.0.0/24
+      # ... skipped...
 ```
+
+## *.net
+
+```text
 RFC1918 = 10.0.0.0/8      # non-public
           172.16.0.0/12   # non-public
           192.168.0.0/16  # non-public

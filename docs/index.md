@@ -8,16 +8,18 @@ Aerleon provides a per operating system configuration generator, each of which i
 
 The data primarily consists of:
 [comment]: <> (TODO Update these once we have those sections)
-* [Policy Files](../lib_policy/) that represent the actual firewall rules
-* [Address Files](../lib_address/) that represent the addresses, in the form of named objects
-* [Service Files](../lib_service/) that represent the services, in the form of named objects
+* [Policy Files](user/lib_policy.md) that represent the actual firewall rules
+* [Address Files](user/lib_address.md) that represent the addresses, in the form of named objects
+* [Service Files](user/lib_service.md) that represent the services, in the form of named objects
 
 ### Supported Configuration Formats
+
 * Legacy Capirca formats
 * YAML
 * Native Python
 
 ### Core Supported Generators
+
 * Arista
 * Aruba
 * Brocade

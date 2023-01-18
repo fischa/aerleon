@@ -1,5 +1,7 @@
 # PaloAltoFW
 
+## Header Format
+
 The paloalto header designation has the following format:
 
 ```yaml
@@ -24,12 +26,9 @@ targets:
 
 * for common keys see [common.md](common.md)
 
-* _destination-port::_ One or more service definition tokens.
-* _icmp-type::_ Specify icmp-type code to match, see section [ICMP TYPES](PolicyFormat#ICMP_TYPES.md) for list of valid arguments
-* _logging::_ Specify that this packet should be logged via syslog.
-* _owner::_ Owner of the term, used for organizational purposes.
-* _source-port::_ one or more service definition tokens.
-* _timeout::_ specify application timeout. (default 60)
+* _logging_: Specify that this packet should be logged via syslog.
+* _owner_: Owner of the term, used for organizational purposes.
+* _timeout_: specify application timeout. (default 60)
 
 ## Sub Tokens
 
